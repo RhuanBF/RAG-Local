@@ -1,0 +1,19 @@
+# --- Banco de Dados Vetorial ---
+# Impede que o banco de dados gerado localmente suba para a nuvem
+banco_de_dados_chroma/
+chroma.sqlite3
+
+# --- Uploads de Usuários ---
+# Impede que os PDFs e documentos de teste que você usou subam para o repositório
+uploads/
+
+# --- Arquivos Temporários do Python ---
+# Pastas automáticas que o Python cria ao rodar o projeto e que não servem para o código
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- Configurações de Ambiente (Opcional) ---
+.venv/
+venv/
+.env

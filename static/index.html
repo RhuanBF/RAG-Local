@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAG Local</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="barra-lateral-container">
+      <h1 id="barra-lateral-title"></h1>
+      <div id="barra-lateral-box" class="barra-lateral-box"></div>
+      <div class="item-lateral">
+        <input type="file" id="file-input" style="display: none;" multiple>
+        <button class="btn-lateral" id="upload-btn">
+          <i class="fas fa-file-upload"></i>
+          Enviar Arquivo
+        </button>
+      </div>
+    </div>
+    <div class="chat-container">
+      <h1 id="title-information">Converse com os seus documentos</h1>
+      <div id="chat-box" class="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Pergunte algo baseado nos seus arquivos" />
+      </div>
+    </div>
+  </div>
+  <script src="/static/scripts.js" defer></script>
+</body>
+</html>
