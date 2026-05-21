@@ -25,7 +25,7 @@ def gerar_resposta(pergunta,contextos):
     1. Estrutura e detalhe: Não resuma excessivamente. Explique os conceitos por tras da resposta, cite dados, métricas, nomes ou regras explícitas que aparecem no texto. Caso apropriado, use tópicos (bullet points) para organizar as informações.
     2. Fidelidade ao contexto: Se baseie apenas nas informações fornecidas. Não invente fatos, não pressuponha nada fora do texto e não use conhecimentos externos.
     3. Tratemento de ausência: Se o CONTEXTO não contiver informações suficientes para responder a pergunta de forma completa, diga explicitamente: "Não encontrei informações suficientes nos documentos para responder a isso."
-
+    
     CONTEXTO:
     {contexto_formatado}
 
@@ -44,6 +44,10 @@ def gerar_resposta(pergunta,contextos):
         }
     )
 
-    resultado = response.json() #
+    resultado = response.json() 
+
+    if "error" in resultado or resultado.get("error"):
+        print(f"Erro no Ollama: {resultado.get('error')}")
+        return f"Verifique se o Ollama está rodando e o modelo está carregado."
 
     return resultado["response"]

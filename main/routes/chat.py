@@ -25,6 +25,8 @@ async def chat(request: Request):
         contextos=contexto
     )
 
+    print(f"Resposta: {resposta}")
+
     return JSONResponse({
         "resposta": resposta,
         "contextos_usados": contexto
